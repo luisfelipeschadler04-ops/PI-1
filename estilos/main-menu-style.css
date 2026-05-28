@@ -1,22 +1,3 @@
-:root {
-  --title-box-background: #114911;
-  --title-box-border: #386e38;
-  --text-color: #c8a8ff;
-  --line-color: #4b5499;
-  --button-background: #534ab7;
-  --button-border: #8b5cf6;
-  --button-text-color: #edecf7;
-  --button-hover-background: #8b5cf6;
-  --button-hover-border: #534ab7;
-  --footer-background: #1a1430;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -71,8 +52,15 @@
   margin: 15px auto;
   align-self: center;
 }
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
 
 .button-text {
+  display: flex;
+
   margin-top: 20px;
   height: 50px;
   width: 200px;
@@ -81,6 +69,8 @@
   color: var(--button-text-color);
   text-transform: uppercase;
   word-spacing: 2px;
+  align-items: center;
+  justify-content: center;
   letter-spacing: 2px;
   margin: 10px;
 }
