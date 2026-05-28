@@ -3,6 +3,12 @@
   --title-box-border: #386e38;
   --text-color: #c8a8ff;
   --line-color: #4b5499;
+  --button-background: #534ab7;
+  --button-border: #8b5cf6;
+  --button-text-color: #edecf7;
+  --button-hover-background: #8b5cf6;
+  --button-hover-border: #534ab7;
+  --footer-background: #1a1430;
 }
 
 * {
@@ -15,8 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  height: 100vh;
+  height: 90vh;
   background-color: #f0f0f0;
 }
 
@@ -68,4 +73,35 @@
 }
 
 .button-text {
+  margin-top: 20px;
+  height: 50px;
+  width: 200px;
+  background-color: var(--button-background);
+  border: 2px solid var(--button-border);
+  color: var(--button-text-color);
+  text-transform: uppercase;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  margin: 10px;
+}
+
+.button-text:hover {
+  background-color: var(--button-hover-background);
+  border-color: var(--button-hover-border);
+  cursor: pointer;
+}
+
+.footer-text {
+  height: 10vh;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--footer-background);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 5px;
+  word-spacing: 3px;
+
+  text-transform: uppercase;
 }
