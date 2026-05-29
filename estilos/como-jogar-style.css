@@ -1,0 +1,69 @@
+:root {
+  --title-box-background: #4c1d95;
+  --title-box-border: #386e38;
+  --text-color: #fff;
+  --title-header-background: #ede9fe;
+  --section-title-text-color: #5b26be;
+}
+
+.title-container {
+  display: flex;
+  width: 800px;
+  height: 400px;
+  flex-direction: column;
+  border: 2px solid var(--title-box-border);
+  background-color: var(--title-header-background);
+}
+
+.title-header {
+  color: var(--text-color);
+  padding: 8px;
+  background-color: var(--title-box-background);
+}
+
+.title-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: var(--text-color);
+}
+
+.objetivo-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  gap: 12px;
+}
+
+.objetivo-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--section-title-text-color);
+}
+.passo-a-passo-section {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 30px;
+  gap: 12px;
+}
+
+.passo-a-passo-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--section-title-text-color);
+}
+
+.passo-a-passo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 20px;
+}
+
+.button-text {
+  width: 250px;
+}
