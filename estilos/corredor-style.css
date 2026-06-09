@@ -1,0 +1,184 @@
+.corredor-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0a0a1a 0%, #15091e 100%);
+  padding: 20px;
+}
+
+.corredor-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.corredor-title {
+  font-size: 1.8rem;
+  color: #a8b5ff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paineis-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex: 1;
+  min-height: 300px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.painel {
+  width: 180px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 4px solid;
+  background: rgba(10, 15, 30, 0.6);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.painel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.painel.seguro {
+  border-color: #4ade80;
+}
+
+.painel.evitativo {
+  border-color: #3b82f6;
+}
+
+.painel.ambivalente {
+  border-color: #d97706;
+}
+
+.painel.desorganizado {
+  border-color: #8b5cf6;
+}
+
+.painel-numero {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #c8a8ff;
+}
+
+.painel-status {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a8b5ff;
+  font-weight: 600;
+}
+
+.painel-marker {
+  font-size: 0.75rem;
+  color: #4ade80;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.painel-icon {
+  font-size: 2rem;
+}
+
+.pixel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.pixel-head {
+  width: 32px;
+  height: 32px;
+  background: #f4d9a0;
+  border: 2px solid #d4a574;
+}
+
+.pixel-head::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background: #2b2a2a;
+}
+
+.pixel-head::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  width: 8px;
+  height: 8px;
+  background: #2b2a2a;
+}
+
+.pixel-body {
+  width: 36px;
+  height: 32px;
+  background: #5555d8;
+  border: 2px solid #4545b8;
+  border-top: none;
+}
+
+.pixel-legs {
+  width: 24px;
+  height: 20px;
+  background: #3d6ba8;
+  border: 2px solid #2d5b88;
+  margin-top: -4px;
+}
+
+.corredor-footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  color: #8a92b8;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .paineis-grid {
+    gap: 15px;
+  }
+
+  .painel {
+    width: 140px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .paineis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .painel {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .corredor-title {
+    font-size: 1.4rem;
+  }
+}
