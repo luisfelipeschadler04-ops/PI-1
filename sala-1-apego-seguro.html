@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./estilos/global-style.css" />
+  <link rel="stylesheet" href="./estilos/sala-1-style.css" />
+  <title>Sala 1 - Apego Seguro</title>
+</head>
+<body class="sala-1-bg">
+  <main class="sala-container">
+    <!-- HUD -->
+    <div class="hud">
+      <div class="hud-left">
+        <span class="hud-vidas">
+          <span class="vida">❤</span>
+          <span class="vida">❤</span>
+          <span class="vida">❤</span>
+        </span>
+      </div>
+      <div class="hud-center">
+        <span class="hud-fase">SALA 1 — APEGO SEGURO</span>
+      </div>
+      <div class="hud-right">
+        <span class="hud-pistas">PISTAS: <span id="pistas-coletadas">0</span>/3</span>
+        <span class="hud-puzzle">PUZZLE: <span id="puzzle-atual">0</span>/3</span>
+      </div>
+    </div>
+
+    <!-- Sala 1 - Quarto iluminado -->
+    <div id="sala-view" class="sala-explorada">
+      <!-- Brinquedo (canto esquerdo) -->
+      <div class="objeto pista-item" data-pista="brinquedo" style="left: 15%; top: 40%;">
+        <div class="objeto-visual brinquedo-item">
+          <div class="objeto-icone">🧸</div>
+          <span class="objeto-label">Brinquedo</span>
+          <span class="objeto-brilho">✨</span>
+        </div>
+      </div>
+
+      <!-- Livro (canto superior direito) -->
+      <div class="objeto pista-item" data-pista="livro" style="right: 20%; top: 15%;">
+        <div class="objeto-visual livro-item">
+          <div class="objeto-icone">📖</div>
+          <span class="objeto-label">Livro</span>
+          <span class="objeto-brilho">✨</span>
+        </div>
+      </div>
+
+      <!-- Foto (centro direito) -->
+      <div class="objeto pista-item" data-pista="foto" style="right: 10%; top: 50%;">
+        <div class="objeto-visual foto-item">
+          <div class="objeto-icone">🖼️</div>
+          <span class="objeto-label">Foto</span>
+          <span class="objeto-brilho">✨</span>
+        </div>
+      </div>
+
+      <!-- Porta (bloqueada até resolver puzzles) -->
+      <div id="porta" class="porta-bloqueada" style="left: 50%; top: 85%; transform: translateX(-50%);">
+        <div class="porta-visual">
+          <span class="tranca-icon">🔒</span>
+          <span class="tranca-contador">
+            <span id="travas-abertas">0</span>/3
+          </span>
+        </div>
+      </div>
+
+      <!-- Narração -->
+      <div id="naracao" class="naracao-box hidden">
+        <div class="naracao-conteudo">
+          <p id="naracao-texto"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Painel de Pista -->
+    <div id="pista-modal" class="modal hidden">
+      <div class="modal-content pista-content">
+        <button class="modal-close" onclick="fecharPista()">&times;</button>
+        <h2 id="pista-titulo">Pista</h2>
+        <div id="pista-texto" class="pista-texto"></div>
+        <button class="btn-primario" onclick="fecharPista()">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Painel de Puzzle -->
+    <div id="puzzle-modal" class="modal hidden">
+      <div class="modal-content puzzle-content">
+        <h2 id="puzzle-titulo">Puzzle 1 de 3</h2>
+        
+        <div class="puzzle-naracao">
+          <p id="puzzle-naracao-texto"></p>
+        </div>
+
+        <div class="puzzle-situacao">
+          <h3>SITUAÇÃO:</h3>
+          <p id="puzzle-situacao-texto"></p>
+        </div>
+
+        <div class="puzzle-pergunta">
+          <h3 id="puzzle-pergunta-texto"></h3>
+        </div>
+
+        <div id="puzzle-opcoes" class="puzzle-opcoes">
+          <!-- Gerado dinamicamente -->
+        </div>
+
+        <button id="btn-submeter" class="btn-primario hidden" onclick="submeterResposta()">
+          Responder
+        </button>
+      </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="modal hidden">
+      <div id="feedback-content" class="modal-content feedback-content">
+        <!-- Gerado dinamicamente -->
+      </div>
+    </div>
+
+    <!-- Sala Concluída -->
+    <div id="sala-concluida" class="modal hidden">
+      <div class="modal-content sala-concluida-content">
+        <h2>SALA 1 CONCLUÍDA!</h2>
+        <div class="conceito-box">
+          <h3>CONCEITO DESBLOQUEADO</h3>
+          <p><strong>Apego Seguro:</strong> formado quando o cuidador é sensível e consistente. Permite equilibrar exploração e busca por proteção. Favorece autoestima, autonomia, resiliência e relações saudáveis. (Bowlby, 2002)</p>
+        </div>
+        <div class="btns-finais">
+          <a href="./corredor.html" class="btn-primario">[ Voltar ao Corredor ]</a>
+          <a href="./sala-2-apego-evitativo.html" class="btn-secundario">[ Próxima Sala ]</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Narração Inicial -->
+    <div id="intro-modal" class="modal">
+      <div class="modal-content intro-content">
+        <h2>Sala 1 - Apego Seguro</h2>
+        <div id="intro-texto">
+          <p class="intro-narrador">Você entra na Sala 1. O ambiente é caloroso — um quarto de criança iluminado, com brinquedos coloridos e luz suave entrando pela janela.</p>
+          <p class="intro-instrucao">Nesta sala, você vai aprender sobre o Apego Seguro. Explore o ambiente, colete as 3 pistas e resolva os 3 desafios para abrir a porta.</p>
+        </div>
+        <button class="btn-primario" onclick="iniciarSala()">Começar</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/sala-1-logic.js"></script>
+</body>
+</html>
