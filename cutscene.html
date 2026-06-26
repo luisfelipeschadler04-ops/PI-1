@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./estilos/global-style.css" />
+  <link rel="stylesheet" href="./estilos/cutscene-style.css" />
+  <title>Laços do Apego - Introdução</title>
+</head>
+<body>
+  <main class="cutscene-container">
+
+    <!-- Caixa de diálogo -->
+    <div class="dialogo-box" id="dialogo-box">
+      <div class="dialogo-header" id="dialogo-header">
+        <span id="dialogo-speaker">NARRADOR</span>
+      </div>
+      <div class="dialogo-corpo">
+        <p id="dialogo-texto"></p>
+      </div>
+      <button class="btn-continuar" id="btn-continuar" onclick="avancarDialogo()">
+        [ Continuar ]
+      </button>
+    </div>
+
+    <!-- Indicador de progresso -->
+    <div class="progresso-dots" id="progresso-dots">
+      <span class="dot ativo" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+      <span class="dot" data-index="5"></span>
+    </div>
+
+    <!-- Overlay de transição (escurecimento) -->
+    <div class="transicao-overlay" id="transicao-overlay"></div>
+
+  </main>
+
+  <script src="./js/cutscene-logic.js"></script>
+</body>
+</html>

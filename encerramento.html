@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./estilos/global-style.css" />
+  <link rel="stylesheet" href="./estilos/encerramento-style.css" />
+  <title>Laços do Apego - Encerramento</title>
+</head>
+<body>
+  <main class="encerramento-container">
+
+    <!-- Fase 1: Sequência de diálogos -->
+    <section id="secao-dialogos">
+      <div class="enc-dialogo-box" id="enc-dialogo-box">
+        <div class="enc-dialogo-header" id="enc-dialogo-header">
+          <span id="enc-speaker">NARRADOR</span>
+        </div>
+        <div class="enc-dialogo-corpo">
+          <p id="enc-dialogo-texto"></p>
+        </div>
+        <button class="btn-continuar-enc" id="btn-enc-continuar" onclick="avancarDialogoEnc()">
+          [ Continuar ]
+        </button>
+      </div>
+    </section>
+
+    <!-- Fase 2: Resultado -->
+    <section id="secao-resultado" class="hidden">
+      <div class="resultado-card">
+        <h2 class="resultado-titulo">Jogo Concluído!</h2>
+        <div class="resultado-estrelas" id="resultado-estrelas">★ ★ ★</div>
+
+        <div class="resultado-pontuacao">
+          <span class="resultado-num" id="resultado-num">0</span>
+          <span class="resultado-den">/12 corretas</span>
+        </div>
+        <div class="resultado-percent" id="resultado-percent">0%</div>
+
+        <div class="resultado-mensagem-box" id="resultado-mensagem-box">
+          <p id="resultado-mensagem"></p>
+        </div>
+
+        <div class="resultado-btns">
+          <button class="btn-primario" onclick="abrirGlossario()">Ver Glossário</button>
+          <button class="btn-secundario" onclick="jogarNovamente()">Jogar Novamente</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Glossário -->
+    <div id="modal-glossario" class="enc-modal hidden">
+      <div class="enc-modal-content">
+        <button class="enc-modal-fechar" onclick="fecharGlossario()">&times;</button>
+        <h2 class="glossario-titulo">Glossário — Os 4 Tipos de Apego</h2>
+
+        <div class="glossario-item seguro">
+          <h3>Apego Seguro</h3>
+          <p>Cuidador sensível e consistente → criança explora com confiança e busca o cuidador quando precisa. Favorece autoestima, autonomia, resiliência e relações saudáveis. (Bowlby, 2002)</p>
+        </div>
+
+        <div class="glossario-item evitativo">
+          <h3>Apego Evitativo</h3>
+          <p>Cuidador rejeitante ou distante → criança suprime emoções e evita demonstrar necessidade. Independência forçada. Pode gerar dificuldades de intimidade e confiança. (Bowlby, 2002)</p>
+        </div>
+
+        <div class="glossario-item ambivalente">
+          <h3>Apego Ambivalente</h3>
+          <p>Cuidador imprevisível → criança em hipervigilância, amplifica emoções e oscila entre busca e raiva. Pode gerar ansiedade crônica e dependência emocional. (Papalia &amp; Feldman, 2013)</p>
+        </div>
+
+        <div class="glossario-item desorganizado">
+          <h3>Apego Desorganizado</h3>
+          <p>Cuidador como fonte de medo → criança sem estratégia, comportamentos confusos. Associado a trauma ou negligência. Exige intervenção especializada. (Bowlby, 2002; Papalia &amp; Feldman, 2013)</p>
+        </div>
+
+        <button class="btn-primario" onclick="fecharGlossario()">Fechar</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./js/game-state.js"></script>
+  <script src="./js/encerramento-logic.js"></script>
+</body>
+</html>

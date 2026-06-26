@@ -45,9 +45,15 @@
   align-self: center;
 }
 
+/* Fundo escuro para o menu principal */
+.main-container {
+  background-color: #0a0a1a !important;
+}
+
+/* Footer */
 .footer-text {
   height: 10vh;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-color);
   background-color: var(--footer-background);
   display: flex;
@@ -56,6 +62,109 @@
   justify-content: center;
   letter-spacing: 5px;
   word-spacing: 3px;
-
   text-transform: uppercase;
+}
+
+/* Animação de piscar no footer */
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.footer-text.piscando {
+  animation: piscar 1.2s ease-in-out infinite;
+}
+
+/* Botão (mesmo visual do link .button-text) */
+button.button-text {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/* Overlay Como Jogar */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background: #1a0a2e;
+  border: 2px solid #7c3aed;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #e2d9f3;
+  position: relative;
+}
+
+.overlay-titulo {
+  color: #c4b5fd;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: #4c1d95;
+  padding: 0.75rem;
+}
+
+.overlay-secao {
+  background: #2d1b4e;
+  border: 1px solid #5b21b6;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-secao h3 {
+  color: #a78bfa;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-secao p,
+.overlay-secao li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ddd6fe;
+}
+
+.overlay-secao ul {
+  padding-left: 1.25rem;
+}
+
+.overlay-secao li {
+  margin-bottom: 0.35rem;
+}
+
+.overlay-fechar {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #c4b5fd;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.overlay-fechar:hover {
+  color: #fff;
 }

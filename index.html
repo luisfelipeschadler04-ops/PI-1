@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-  <link rel="stylesheet" href="./estilos/global-style.css" />
-    <link rel="stylesheet" href="./estilos/main-menu-style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./estilos/global-style.css" />
+    <link rel="stylesheet" href="./estilos/main-menu-style.css" />
+    <title>Laços do Apego</title>
   </head>
   <body>
     <div class="main-container">
@@ -17,11 +17,57 @@
       </div>
 
       <div class="button-container">
-        <a class="button-text" href="./corredor.html">[ Iniciar ]</a>
-        <a class="button-text" href="./como_jogar.html">[ Como Jogar ]</a>
+        <a class="button-text" href="./cutscene.html">[ Iniciar ]</a>
+        <button class="button-text" onclick="abrirComoJogar()">[ Como Jogar ]</button>
       </div>
     </div>
+
+    <footer>
+      <p class="footer-text piscando">Pressione qualquer tecla para começar</p>
+    </footer>
+
+    <!-- Overlay: Como Jogar -->
+    <div id="overlay-como-jogar" class="overlay hidden">
+      <div class="overlay-content">
+        <button class="overlay-fechar" onclick="fecharComoJogar()">&times;</button>
+        <h2 class="overlay-titulo">Como Jogar — Instruções Completas</h2>
+
+        <div class="overlay-secao">
+          <h3>Objetivo:</h3>
+          <p>Você está preso em um corredor com 4 salas. Cada sala representa um tipo de apego da Teoria de Bowlby. Para escapar, resolva todos os desafios de cada sala.</p>
+        </div>
+
+        <div class="overlay-secao">
+          <h3>Passo a Passo:</h3>
+          <ul>
+            <li>Clique nos objetos brilhantes ✨ para coletar pistas</li>
+            <li>Colete as 3 pistas da sala para desbloquear os puzzles</li>
+            <li>Clique na porta 🔒 para iniciar os puzzles</li>
+            <li>Cada sala tem 3 puzzles — resolva todos para abrir a porta</li>
+            <li>Resposta errada = −1 vida ❤ | Sem vidas = reinicia a sala</li>
+            <li>Complete todas as 4 salas para escapar do corredor!</li>
+          </ul>
+        </div>
+
+        <div class="overlay-secao">
+          <h3>Dica:</h3>
+          <p>Leia todas as pistas com atenção antes de responder — elas contêm as informações necessárias para resolver os puzzles.</p>
+        </div>
+
+        <button class="btn-primario" onclick="fecharComoJogar()">Entendido!</button>
+      </div>
+    </div>
+
+    <script>
+      function abrirComoJogar() {
+        document.getElementById('overlay-como-jogar').classList.remove('hidden');
+      }
+      function fecharComoJogar() {
+        document.getElementById('overlay-como-jogar').classList.add('hidden');
+      }
+      document.addEventListener('keydown', () => {
+        window.location.href = './cutscene.html';
+      });
+    </script>
   </body>
-  <footer>
-    <p class="footer-text">Pressione qualquer tecla para começar</p>
 </html>

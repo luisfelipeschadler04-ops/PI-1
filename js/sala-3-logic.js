@@ -1,63 +1,63 @@
 const pistasData = {
   brinquedo: {
-    titulo: "PISTA — Objeto: BRINQUEDO NO CHÃO",
-    texto: "Sofia (18 meses) corre para a mãe para ser confortada. Mas a mãe às vezes a abraça, às vezes a empurra. Sofia não sabe o que esperar. Ela chora muito, não consegue se acalmar sozinha e fica ansiosa quando a mãe sai."
+    titulo: "PISTA — Objeto: RELÓGIO QUEBRADO",
+    texto: "Carlos (3 anos): quando a mãe sai, chora inconsolavelmente. Quando ela volta, corre para ela e logo a empurra com raiva. Mesmo com a mãe tentando confortá-lo, Carlos oscila entre se agarrar a ela e se afastar."
   },
   livro: {
-    titulo: "PISTA — Objeto: LIVRO NA PRATELEIRA",
-    texto: "Bowlby (2002): no apego ambivalente, o cuidador é inconsistente e impredizível. A criança entra em hipervigilância, sempre tentando prever o comportamento do cuidador. A criança desenvolve ansiedade de separação severa."
+    titulo: "PISTA — Objeto: AGENDA COM COMPROMISSOS RISCADOS",
+    texto: "O cuidador ambivalente é imprevisível: às vezes responsivo e carinhoso, às vezes ausente ou irritadiço — sem que a criança consiga identificar padrão. A criança fica em alerta constante: 'Quando eu precisar, o cuidador estará lá?' (Bowlby, 2002)"
   },
   carta: {
-    titulo: "PISTA — Objeto: CARTA NA PAREDE",
-    texto: "Crianças com apego ambivalente têm dificuldade em autorregulação, são emocionalmente dependentes, desenvolvem ansiedade generalizada, e frequentemente reproduzem relacionamentos inseguros na vida adulta. Podem ter dificuldade em separações, mesmo necessárias. (Ainsworth, 1978)"
+    titulo: "PISTA — Objeto: DESENHO RASGADO E COLADO",
+    texto: "A hipervigilância é uma estratégia: a criança intensifica suas reações — chorar mais, gritar mais — para garantir que o cuidador imprevisível preste atenção. Resultado: dificuldade de regulação emocional e ansiedade crônica. (Papalia & Feldman, 2013)"
   }
 };
 
 const puzzlesData = [
   {
     numero: 1,
-    titulo: "Puzzle 1 de 3 — O comportamento da mãe de Sofia",
-    naracao: "Primeira trava da porta. Use as pistas que coletou para responder!",
-    situacao: "Sofia busca conforto, mas nunca sabe se será acolhida ou rejeitada. Às vezes a mãe a abraça ternamente. Outras vezes a mãe a empurra irritada. Sofia ficou ansiosa, chora frequentemente e não consegue brincar sozinha.",
-    pergunta: "Qual característica do cuidador está criando apego ambivalente em Sofia?",
+    titulo: "Puzzle 1 de 3 — Reconhecendo o apego ambivalente",
+    naracao: "Primeira trava. Use as pistas coletadas!",
+    situacao: "Carlos (3 anos): quando a mãe sai, chora inconsolavelmente. Quando ela volta, corre para ela e logo a empurra com raiva. Oscila entre se agarrar à mãe e se afastar, sem conseguir se acalmar.",
+    pergunta: "O comportamento de Carlos é característico de qual tipo de apego?",
     opcoes: [
-      { letra: "A", texto: "Inconsistência e imprevisibilidade — Sofia não consegue antecipar como a mãe reagirá, causando ansiedade crônica.", correta: true },
-      { letra: "B", texto: "Superenvolvimento — a mãe está muito apegada à Sofia.", correta: false },
-      { letra: "C", texto: "Personalidade de Sofia — ela é naturalmente ansiosa.", correta: false },
-      { letra: "D", texto: "Falta de brinquedos — Sofia não tem estímulos suficientes.", correta: false }
+      { letra: "A", texto: "Comportamento normal de birra — crianças de 3 anos costumam ter reações intensas.", correta: false },
+      { letra: "B", texto: "Apego seguro — Carlos busca a mãe, o que indica vínculo positivo.", correta: false },
+      { letra: "C", texto: "Apego ambivalente — Carlos oscila entre buscar proximidade e expressar raiva do cuidador.", correta: true },
+      { letra: "D", texto: "Apego desorganizado — o comportamento não tem padrão algum.", correta: false }
     ],
-    feedbackCorreto: "Exatamente! A inconstância do cuidador força a criança a ficar em 'hipervigilância', sempre tentando adivinhar o próximo comportamento. Isso cria ansiedade intensa, porque a criança não pode confiar na previsibilidade do cuidador.",
-    feedbackErrado: "Releia a Pista 2! A inconsistência do cuidador é a marca do apego ambivalente. Não é a personalidade de Sofia — é a impossibilidade de prever se será aceita ou rejeitada que causa a ansiedade."
+    feedbackCorreto: "Correto! O apego ambivalente TEM estratégia, mas ela é contraditória: buscar + rejeitar. Carlos não consegue se acalmar porque a imprevisibilidade do cuidador o deixou em alerta constante, mesmo quando a mãe está presente.",
+    feedbackErrado: "A distinção é sutil: o desorganizado NÃO tem estratégia. Carlos TEM uma estratégia — só que contraditória (busca e rejeita). Isso é a marca do ambivalente. Releia a Pista 1!"
   },
   {
     numero: 2,
-    titulo: "Puzzle 2 de 3 — A hipervigilância em crianças ambivalentes",
-    naracao: "Primeira trava resolvida! Segunda trava se acende. Continue!",
-    situacao: "João tem 2 anos. Está brincando, mas frequentemente para para olhar onde a mãe está. Quando a mãe se move, João fica atento. Se a mãe olha para ele com expressão brava, João chora imediatamente. João não consegue explorar confiante.",
-    pergunta: "O comportamento de 'vigilância constante' de João é uma consequência de qual padrão de apego?",
+    titulo: "Puzzle 2 de 3 — O papel do cuidador no apego ambivalente",
+    naracao: "Segunda trava. Continue!",
+    situacao: "A mãe de Ana às vezes responde prontamente quando Ana chora — com carinho e atenção. Outras vezes, nas mesmas situações, está no celular e mal percebe que a filha está chorando. Ana nunca sabe como a mãe vai reagir.",
+    pergunta: "Como a inconsistência da mãe de Ana influencia o desenvolvimento do apego dela?",
     opcoes: [
-      { letra: "A", texto: "Apego seguro — João é uma criança atenciosa.", correta: false },
-      { letra: "B", texto: "Hipervigilância do apego ambivalente — João aprendeu que precisa monitorar o cuidador para tentar antecipar rejeição.", correta: true },
-      { letra: "C", texto: "Apego evitativo — João prefere ignorar a mãe.", correta: false },
-      { letra: "D", texto: "Timidez natural — João tem personalidade introvertida.", correta: false }
+      { letra: "A", texto: "Positivamente — a mãe é carinhosa em várias situações.", correta: false },
+      { letra: "B", texto: "A imprevisibilidade gera o apego ambivalente — Ana não consegue prever se será atendida, ficando em alerta constante.", correta: true },
+      { letra: "C", texto: "Não influencia — o temperamento de Ana determina como ela reagirá.", correta: false },
+      { letra: "D", texto: "Cria apego evitativo — Ana vai aprender a ignorar suas próprias necessidades.", correta: false }
     ],
-    feedbackCorreto: "Correto! Crianças com apego ambivalente desenvolvem 'hipervigilância' — monitoram constantemente o cuidador para tentar prever comportamentos. Essa estratégia de sobrevivência consome muita energia mental e impede a exploração saudável.",
-    feedbackErrado: "A hipervigilância não é timidez ou apego seguro. É uma estratégia de proteção emocional de crianças cujos cuidadores são impredizíveis. João está constantemente 'à defesa', o que bloqueia a exploração."
+    feedbackCorreto: "Exatamente! A inconsistência é o fator central do ambivalente. Ana não pode confiar nem desconfiar totalmente da mãe — e essa incerteza é ainda mais ansiogênica que a rejeição consistente do cuidador evitativo. (Bowlby, 2002)",
+    feedbackErrado: "A chave está na inconsistência. Não é que a mãe seja ruim — é que é imprevisível. Para a criança, incerteza constante é mais perturbadora que rejeição previsível. Releia a Pista 2!"
   },
   {
     numero: 3,
-    titulo: "Puzzle 3 de 3 — Adultos com apego ambivalente",
-    naracao: "Última trava! Resolva para abrir a porta da Sala 3.",
-    situacao: "Marina (26 anos) está em um relacionamento. Ela precisa de constante reasseguração de seu parceiro, fica ansiosa quando ele não responde imediatamente às mensagens, e frequentemente prova sua lealdade com atos extremos de sacrifício. Ela teme ser abandonada constantemente.",
-    pergunta: "Como o apego ambivalente da infância de Marina se manifesta em seu relacionamento adulto?",
+    titulo: "Puzzle 3 de 3 — Consequências do apego ambivalente na vida adulta",
+    naracao: "Última trava da Sala 3! Resolva para abrir a porta.",
+    situacao: "Lucas cresceu com apego ambivalente. Na vida adulta tem relacionamentos muito intensos, sente ciúme excessivo, teme constantemente ser abandonado e busca reasseguramento contínuo, mesmo sem motivo aparente.",
+    pergunta: "Segundo a Teoria do Apego, o padrão de Lucas na vida adulta está relacionado a:",
     opcoes: [
-      { letra: "A", texto: "Amar profundamente — Marina demonstra envolvimento emocional genuíno.", correta: false },
-      { letra: "B", texto: "Os 'modelos internos de funcionamento' perpetuam a necessidade de reasseguração constante e o medo de abandono, refletindo a inconsistência do cuidador.", correta: true },
-      { letra: "C", texto: "Compatibilidade perfeita com relacionamentos — Marina é dedicada.", correta: false },
-      { letra: "D", texto: "Experiência de vida — Marina só precisa aprender com erros passados.", correta: false }
+      { letra: "A", texto: "Experiências ruins em relacionamentos adultos que o tornaram inseguro.", correta: false },
+      { letra: "B", texto: "O apego ambivalente na infância criou um modelo interno de incerteza sobre a disponibilidade dos outros.", correta: true },
+      { letra: "C", texto: "Traço de personalidade — Lucas é naturalmente mais emotivo.", correta: false },
+      { letra: "D", texto: "Falta de limites na infância — Lucas foi muito mimado.", correta: false }
     ],
-    feedbackCorreto: "Perfeito! Marina permanece presa aos padrões de apego ambivalente. Busca reasseguração como fez na infância, porque internalizou 'preciso provar que valho a pena' e 'posso ser abandonada sem motivo'. Esses modelos internos precisam ser reconstruídos em terapia.",
-    feedbackErrado: "Releia a Pista 3! Não é sobre amar profundamente. É sobre a perpetuação dos padrões inseguros. Marina reproduz a dinâmica de inconsistência: precisa provar constantemente seu valor, assim como fez com a mãe."
+    feedbackCorreto: "Perfeito! O apego ambivalente cria o modelo: 'Os outros podem me abandonar a qualquer momento — preciso me certificar constantemente de que ainda me amam.' Lucas aprendeu essa hipervigilância na infância. (Papalia & Feldman, 2013)",
+    feedbackErrado: "O ciúme e o medo de abandono de Lucas não são coincidência — são a versão adulta da criança que nunca sabia se o cuidador estaria disponível. Releia a Pista 3!"
   }
 ];
 
@@ -69,11 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function iniciarSala() {
+  GameState.resetarAcertosSala(3);
   document.getElementById('intro-modal').classList.add('hidden');
   document.getElementById('sala-view').classList.remove('hidden');
 }
-
-function adicionarEventosPistas() {
   document.querySelectorAll('.pista-item').forEach(item => {
     item.addEventListener('click', function() {
       const pistaId = this.dataset.pista;
@@ -144,7 +143,7 @@ function submeterResposta() {
   if (gameState.respostaSelecionada === null) { alert('Selecione uma opção!'); return; }
   const puzzle = puzzlesData[gameState.puzzleAtivo];
   const opcaoSelecionada = puzzle.opcoes[gameState.respostaSelecionada];
-  if (opcaoSelecionada.correta) exibirFeedbackCorreto(puzzle);
+  if (opcaoSelecionada.correta) { GameState.salvarAcerto(3); exibirFeedbackCorreto(puzzle); }
   else exibirFeedbackErrado(puzzle);
 }
 
@@ -166,7 +165,7 @@ function exibirFeedbackErrado(puzzle) {
   feedback.className = 'modal-content feedback-content feedback-errado';
   feedback.innerHTML = `<div class="feedback-icon">✗</div><div class="feedback-titulo">RESPOSTA ERRADA. −1 VIDA.</div><div class="feedback-mensagem">${puzzle.feedbackErrado}</div><div class="feedback-botoes"><button class="btn-primario" onclick="fecharFeedback()">[ Tentar de Novo ]</button><button class="btn-secundario" onclick="reverPistas()">[ Rever Pistas ]</button></div>`;
   document.getElementById('feedback-modal').classList.remove('hidden');
-  if (gameState.vidas <= 0) { setTimeout(() => { alert('Suas vidas acabaram! Você pode reiniciar esta sala.'); location.reload(); }, 1000); }
+  if (gameState.vidas <= 0) { setTimeout(() => exibirGameOver(), 800); }
 }
 
 function atualizarVidas() {
@@ -199,10 +198,18 @@ function proximoPuzzleOuConcluir() {
 }
 
 function concluirSala() {
+  GameState.marcarSalaConcluida(3);
   document.getElementById('puzzle-modal').classList.add('hidden');
   document.getElementById('feedback-modal').classList.add('hidden');
   document.getElementById('sala-view').classList.add('hidden');
   document.getElementById('sala-concluida').classList.remove('hidden');
+}
+
+function exibirGameOver() {
+  const feedback = document.getElementById('feedback-content');
+  feedback.className = 'modal-content feedback-content feedback-errado';
+  feedback.innerHTML = `<div class="feedback-icon">💔</div><div class="feedback-titulo">SUAS VIDAS ACABARAM!</div><div class="feedback-mensagem">Não desanime — rever o conteúdo faz parte do aprendizado. Você pode reiniciar esta sala e tentar novamente.</div><div class="feedback-botoes"><button class="btn-primario" onclick="location.reload()">[ Reiniciar Sala ]</button><button class="btn-secundario" onclick="window.location.href='./corredor.html'">[ Voltar ao Corredor ]</button></div>`;
+  document.getElementById('feedback-modal').classList.remove('hidden');
 }
 
 function exibirNaracao(texto) {

@@ -14,38 +14,64 @@
     </header>
 
     <div class="paineis-grid">
-      <a href="./sala-1-apego-seguro.html" class="painel seguro">
+      <!-- Sala 1 — sempre desbloqueada -->
+      <div class="painel seguro" id="painel-1" data-sala="1" data-url="./sala-1-apego-seguro.html">
         <div class="painel-numero">1</div>
-        <div class="painel-status">Seguro</div>
-        <div class="painel-marker">Done ✓</div>
-      </a>
+        <div class="painel-nome">Apego Seguro</div>
+        <div class="painel-icone">💚</div>
+        <div class="painel-status" id="status-1"></div>
+      </div>
 
-      <a href="./sala-2-apego-evitativo.html" class="painel evitativo">
+      <!-- Sala 2 -->
+      <div class="painel evitativo" id="painel-2" data-sala="2" data-url="./sala-2-apego-evitativo.html">
         <div class="painel-numero">2</div>
-        <div class="painel-status">Evitativo</div>
-        <div class="pixel-container">
-          <div class="pixel-head"></div>
-          <div class="pixel-body"></div>
-          <div class="pixel-legs"></div>
-        </div>
-      </a>
+        <div class="painel-nome">Apego Evitativo</div>
+        <div class="painel-icone" id="icone-2">🔒</div>
+        <div class="painel-status" id="status-2"></div>
+      </div>
 
-      <a href="./sala-3-apego-ambivalente.html" class="painel ambivalente">
+      <!-- Sala 3 -->
+      <div class="painel ambivalente" id="painel-3" data-sala="3" data-url="./sala-3-apego-ambivalente.html">
         <div class="painel-numero">3</div>
-        <div class="painel-status">Ambivalente</div>
-        <div class="painel-icon">🎒</div>
-      </a>
+        <div class="painel-nome">Apego Ambivalente</div>
+        <div class="painel-icone" id="icone-3">🔒</div>
+        <div class="painel-status" id="status-3"></div>
+      </div>
 
-      <a href="./sala-4-apego-desorganizado.html" class="painel desorganizado">
+      <!-- Sala 4 -->
+      <div class="painel desorganizado" id="painel-4" data-sala="4" data-url="./sala-4-apego-desorganizado.html">
         <div class="painel-numero">4</div>
-        <div class="painel-status">Desorganizado</div>
-        <div class="painel-icon">?</div>
-      </a>
+        <div class="painel-nome">Apego Desorganizado</div>
+        <div class="painel-icone" id="icone-4">🔒</div>
+        <div class="painel-status" id="status-4"></div>
+      </div>
     </div>
 
     <footer class="corredor-footer">
-      <p class="footer-text">Corredor do Conhecimento - Use as setas para mover o personagem</p>
+      <p class="footer-text">Clique em uma sala para entrar</p>
     </footer>
   </main>
+
+  <!-- Modal: Sala Bloqueada -->
+  <div id="modal-bloqueado" class="corredor-modal hidden">
+    <div class="corredor-modal-content">
+      <p class="corredor-modal-texto">Esta sala ainda está trancada. Complete a sala anterior para encontrar a chave.</p>
+      <button class="btn-primario" onclick="fecharModalCorredor()">Entendido</button>
+    </div>
+  </div>
+
+  <!-- Modal: Revisitar Sala -->
+  <div id="modal-revisitar" class="corredor-modal hidden">
+    <div class="corredor-modal-content">
+      <p class="corredor-modal-texto">Você já passou por aqui. Quer revisar o que aprendeu?</p>
+      <div class="corredor-modal-btns">
+        <button class="btn-primario" id="btn-revisitar-sim">Sim, revisitar</button>
+        <button class="btn-secundario" onclick="fecharModalCorredor()">Não</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/game-state.js"></script>
+  <script src="./js/corredor-logic.js"></script>
 </body>
 </html>

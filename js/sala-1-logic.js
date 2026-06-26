@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Iniciar Sala
 function iniciarSala() {
+  GameState.resetarAcertosSala(1);
   document.getElementById('intro-modal').classList.add('hidden');
   document.getElementById('sala-view').classList.remove('hidden');
 }
@@ -191,6 +192,7 @@ function submeterResposta() {
   const acertou = opcaoSelecionada.correta;
 
   if (acertou) {
+    GameState.salvarAcerto(1);
     exibirFeedbackCorreto(puzzle);
   } else {
     exibirFeedbackErrado(puzzle);
@@ -239,10 +241,7 @@ function exibirFeedbackErrado(puzzle) {
   document.getElementById('feedback-modal').classList.remove('hidden');
 
   if (gameState.vidas <= 0) {
-    setTimeout(() => {
-      alert('Suas vidas acabaram! Você pode reiniciar esta sala.');
-      location.reload();
-    }, 1000);
+    setTimeout(() => exibirGameOver(), 800);
   }
 }
 
@@ -283,10 +282,26 @@ function proximoPuzzleOuConcluir() {
 }
 
 function concluirSala() {
+  GameState.marcarSalaConcluida(1);
   document.getElementById('puzzle-modal').classList.add('hidden');
   document.getElementById('feedback-modal').classList.add('hidden');
   document.getElementById('sala-view').classList.add('hidden');
   document.getElementById('sala-concluida').classList.remove('hidden');
+}
+
+function exibirGameOver() {
+  const feedback = document.getElementById('feedback-content');
+  feedback.className = 'modal-content feedback-content feedback-errado';
+  feedback.innerHTML = `
+    <div class="feedback-icon">💔</div>
+    <div class="feedback-titulo">SUAS VIDAS ACABARAM!</div>
+    <div class="feedback-mensagem">Não desanime — rever o conteúdo faz parte do aprendizado. Você pode reiniciar esta sala e tentar novamente.</div>
+    <div class="feedback-botoes">
+      <button class="btn-primario" onclick="location.reload()">[ Reiniciar Sala ]</button>
+      <button class="btn-secundario" onclick="window.location.href='./corredor.html'">[ Voltar ao Corredor ]</button>
+    </div>
+  `;
+  document.getElementById('feedback-modal').classList.remove('hidden');
 }
 
 function exibirNaracao(texto) {
