@@ -1,63 +1,63 @@
 const pistasData = {
   brinquedo: {
-    titulo: "PISTA — Objeto: BRINQUEDO NO CHÃO",
-    texto: "Tomás (2 anos) corre para o pai para ser confortado, mas o pai o bate. Tomás congela, confuso. Minutos depois, Tomás corre de novo para o pai. Mas também o teme. Tomás não consegue encontrar segurança em lugar nenhum porque seu cuidador é a fonte do medo."
+    titulo: "PISTA — Objeto: SOMBRA NA PAREDE",
+    texto: "Mariana (4 anos): às vezes corre para a mãe ao vê-la entrar. Às vezes recua e foge. Em outros momentos, fica completamente imóvel, como se estivesse congelada. Não há padrão claro — os comportamentos parecem aleatórios e contraditórios."
   },
   livro: {
-    titulo: "PISTA — Objeto: LIVRO NA PRATELEIRA",
-    texto: "Main & Hesse (1990): no apego desorganizado, o cuidador é simultaneamente a fonte de conforto E de medo (abuso, negligência severa, trauma não resolvido do cuidador). A criança não consegue formar uma estratégia coerente porque não há solução possível."
+    titulo: "PISTA — Objeto: ESPELHO RACHADO",
+    texto: "O paradoxo do apego desorganizado: a figura que deveria ser fonte de segurança é também fonte de medo. A criança fica presa num dilema sem solução — não pode se aproximar (é perigoso) nem pode fugir (precisa do cuidador). Não há estratégia possível. (Bowlby, 2002)"
   },
   diario: {
-    titulo: "PISTA — Objeto: DIÁRIO NA PAREDE",
-    texto: "Crianças com apego desorganizado têm risco elevado de psicopatologia, agressividade, dissociação, transtornos emocionais severos, comportamento desafiador, e dificuldade extrema em relacionamentos. Requerem intervenção terapêutica especializada. (Main & Solomon, 1990)"
+    titulo: "PISTA — Objeto: CADERNETA ESCOLAR",
+    texto: "O apego desorganizado está associado a contextos de negligência grave, abuso ou situações em que o próprio cuidador vive sofrimento intenso. Os comportamentos confusos da criança são a única resposta possível a um dilema impossível. Exige atenção especializada. (Papalia & Feldman, 2013)"
   }
 };
 
 const puzzlesData = [
   {
     numero: 1,
-    titulo: "Puzzle 1 de 3 — Por que Tomás corre e teme ao mesmo tempo?",
-    naracao: "Primeira trava da porta. Use as pistas que coletou para responder!",
-    situacao: "Tomás busca conforto com o pai, mas o pai o magoa. Tomás está paralisado: busca proteção de quem o machuca. Não consegue confiar, não consegue evitar. Fica congelado na presença do pai.",
-    pergunta: "Qual é o paradoxo central do apego desorganizado?",
+    titulo: "Puzzle 1 de 3 — Reconhecendo o apego desorganizado",
+    naracao: "A última sala. Primeira trava. Use todas as pistas!",
+    situacao: "Mariana (4 anos): às vezes corre para a mãe, às vezes foge dela, às vezes fica completamente imóvel. Não há padrão consistente nas reações de Mariana.",
+    pergunta: "O comportamento de Mariana é característico de qual tipo de apego?",
     opcoes: [
-      { letra: "A", texto: "O cuidador é simultaneamente a fonte de conforto E de medo, criando um conflito sem solução.", correta: true },
-      { letra: "B", texto: "Tomás é naturalmente agressivo e incontrolável.", correta: false },
-      { letra: "C", texto: "O pai não tem recursos suficientes para cuidar.", correta: false },
-      { letra: "D", texto: "Tomás não consegue ligar emocionalmente com ninguém.", correta: false }
+      { letra: "A", texto: "Apego seguro — Mariana busca a mãe, o que é sinal de vínculo.", correta: false },
+      { letra: "B", texto: "Apego evitativo — Mariana às vezes foge, indicando distanciamento.", correta: false },
+      { letra: "C", texto: "Apego ambivalente — Mariana oscila entre busca e rejeição.", correta: false },
+      { letra: "D", texto: "Apego desorganizado — ausência de estratégia consistente; paradoxo entre medo e necessidade de apego.", correta: true }
     ],
-    feedbackCorreto: "Exatamente! Isso é o paradoxo do apego desorganizado. A criança precisa do cuidador, mas o cuidador é quem causa medo. Não há estratégia possível de apego — a criança fica presa em abordagem-evitação impossível.",
-    feedbackErrado: "Releia a Pista 2! Não é sobre agressividade de Tomás. É sobre o cuidador ser simultaneamente conforto E perigo. Crie-se uma situação insolúvel de apego."
+    feedbackCorreto: "Correto! A diferença do ambivalente (que tem estratégia: buscar e rejeitar) é que Mariana não tem estratégia alguma. Ela corre, foge e paralisa de forma imprevisível porque qualquer resposta é igualmente perigosa. (Bowlby, 2002)",
+    feedbackErrado: "O evitativo TEM estratégia (suprimir). O ambivalente TEM estratégia (amplificar e oscilar). Mariana NÃO TEM estratégia — seus comportamentos não formam nenhum padrão. Isso define o desorganizado."
   },
   {
     numero: 2,
-    titulo: "Puzzle 2 de 3 — Origens do apego desorganizado",
-    naracao: "Primeira trava resolvida! Segunda trava se acende. Continue!",
-    situacao: "Pedro (18 meses) tem uma mãe com trauma não resolvido de sua própria infância. Quando Pedro chora, a mãe o consola bem, mas sua expressão facial fica aterrorizada e ela grita. Pedro fica confuso: a mãe o consola, mas seus sinais corporais mostram medo.",
-    pergunta: "Qual é a principal origem do apego desorganizado neste caso?",
+    titulo: "Puzzle 2 de 3 — O paradoxo do apego desorganizado",
+    naracao: "Segunda trava. Você está quase lá!",
+    situacao: "O pai de João frequentemente intimida a família. Às vezes João corre para o pai quando tem medo de outras coisas, porque ele é o único adulto presente. Mas o próprio pai é frequentemente fonte do medo. João não sabe para onde ir quando se assusta.",
+    pergunta: "A situação de João ilustra qual conceito central do apego desorganizado?",
     opcoes: [
-      { letra: "A", texto: "O trauma não resolvido do cuidador cria comportamento assustador, criando apego desorganizado.", correta: true },
-      { letra: "B", texto: "Pedro é uma criança particularmente sensível.", correta: false },
-      { letra: "C", texto: "A mãe não ama seu filho.", correta: false },
-      { letra: "D", texto: "Não há indicadores de problemas nesta situação.", correta: false }
+      { letra: "A", texto: "Falta de vínculo — João não tem apego ao pai porque tem medo dele.", correta: false },
+      { letra: "B", texto: "O paradoxo da figura que é simultaneamente fonte de segurança e de medo, deixando a criança sem estratégia possível.", correta: true },
+      { letra: "C", texto: "Apego ambivalente — João oscila entre buscar e rejeitar o pai.", correta: false },
+      { letra: "D", texto: "Trauma simples — João desenvolverá TEPT, não um padrão de apego.", correta: false }
     ],
-    feedbackCorreto: "Correto! O apego desorganizado frequentemente vem do trauma não resolvido do cuidador. A mãe quer confortar, mas seu próprio sistema nervoso assustado ativa o sistema de ameaça. Isso confunde profundamente a criança.",
-    feedbackErrado: "Não é sobre sensibilidade de Pedro. É sobre o cuidador estar emocionalmente dysregulado, enviando sinais conflitantes (conforto + medo). Isso cria apego desorganizado."
+    feedbackCorreto: "Exatamente! O paradoxo de Bowlby: a criança precisa do cuidador para se sentir segura, mas esse mesmo cuidador é fonte de ameaça. Aproximar-se é perigoso. Fugir é impossível. A paralisia é a única 'saída'. (Bowlby, 2002)",
+    feedbackErrado: "João não deixou de ter apego ao pai — ainda o busca. Mas esse mesmo pai é fonte de medo. Essa contradição impossível — precisar de quem te amedronta — é o núcleo do desorganizado. Releia a Pista 2!"
   },
   {
     numero: 3,
-    titulo: "Puzzle 3 de 3 — Adultos com apego desorganizado",
-    naracao: "Última trava! Resolva para abrir a porta da Sala 4.",
-    situacao: "Gabriel (30 anos) tem relacionamentos turbulentos, alternando entre envolvimento extremo e distância hostil. Frequentemente tem explosões de raiva, dificuldade em confiança, e comportamentos que parecem autoagressivos. Sua vida é caótica.",
-    pergunta: "Como o apego desorganizado de Gabriel persiste na vida adulta?",
+    titulo: "Puzzle 3 de 3 — Identificação e intervenção profissional",
+    naracao: "Última trava de todo o jogo! Resolva para escapar!",
+    situacao: "Uma psicóloga escolar observa que Bia (6 anos) ora se aproxima intensamente da professora, ora a evita sem motivo, ora fica paralisada em conflitos leves. Há histórico de negligência em casa.",
+    pergunta: "Considerando a Teoria do Apego, qual é a conduta mais adequada da psicóloga?",
     opcoes: [
-      { letra: "A", texto: "Gabriel escolhe deliberadamente relacionamentos problemáticos.", correta: false },
-      { letra: "B", texto: "Os 'modelos internos' desorganizados perpetuam caos, desconfiança severa e dificuldade em regulação emocional. Gabriel reproduz o padrão sem estratégia coerente.", correta: true },
-      { letra: "C", texto: "Gabriel precisar apenas de determinação para 'superar' seus problemas.", correta: false },
-      { letra: "D", texto: "O apego desorganizado desaparece naturalmente na vida adulta.", correta: false }
+      { letra: "A", texto: "Ignorar — Bia é pequena e vai se ajustar com o tempo.", correta: false },
+      { letra: "B", texto: "Encaminhar para avaliação especializada, pois os comportamentos indicam possível apego desorganizado relacionado ao histórico de negligência.", correta: true },
+      { letra: "C", texto: "Orientar a professora a ser mais firme com Bia para estabelecer limites.", correta: false },
+      { letra: "D", texto: "Comunicar aos pais que Bia está tendo comportamentos inadequados.", correta: false }
     ],
-    feedbackCorreto: "Perfeito! Gabriel permanece preso ao padrão desorganizado. Seus 'modelos internos' o dizem que 'o mundo é ameaçador', 'as pessoas ferem', 'não há segurança'. Sem terapia especializada, esse padrão persiste e perpetua caos.",
-    feedbackErrado: "Releia a Pista 3! Apego desorganizado na infância não desaparece sozinho. Requer terapia especializada. Gabriel não 'escolhe' caos — seus modelos internos de funcionamento o mantêm em padrões desorganizados."
+    feedbackCorreto: "Excelente! O apego desorganizado exige atenção especializada. Profissionais de educação e saúde têm papel crucial na identificação precoce. A intervenção adequada pode ajudar a criança a desenvolver estratégias mais adaptativas. (Papalia & Feldman, 2013)",
+    feedbackErrado: "O apego desorganizado não se resolve sozinho nem com disciplina mais firme. Exige avaliação e intervenção especializada. É responsabilidade dos profissionais que trabalham com crianças reconhecer esses sinais. Releia a Pista 3!"
   }
 ];
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   adicionarEventosPorta();
 });
 
-function iniciarSala() { document.getElementById('intro-modal').classList.add('hidden'); document.getElementById('sala-view').classList.remove('hidden'); }
+function iniciarSala() { GameState.resetarAcertosSala(4); document.getElementById('intro-modal').classList.add('hidden'); document.getElementById('sala-view').classList.remove('hidden'); }
 
 function adicionarEventosPistas() {
   document.querySelectorAll('.pista-item').forEach(item => {
@@ -133,7 +133,7 @@ function submeterResposta() {
   if (gameState.respostaSelecionada === null) { alert('Selecione uma opção!'); return; }
   const puzzle = puzzlesData[gameState.puzzleAtivo];
   const opcaoSelecionada = puzzle.opcoes[gameState.respostaSelecionada];
-  if (opcaoSelecionada.correta) exibirFeedbackCorreto(puzzle);
+  if (opcaoSelecionada.correta) { GameState.salvarAcerto(4); exibirFeedbackCorreto(puzzle); }
   else exibirFeedbackErrado(puzzle);
 }
 
@@ -152,7 +152,7 @@ function exibirFeedbackErrado(puzzle) {
   feedback.className = 'modal-content feedback-content feedback-errado';
   feedback.innerHTML = `<div class="feedback-icon">✗</div><div class="feedback-titulo">RESPOSTA ERRADA. −1 VIDA.</div><div class="feedback-mensagem">${puzzle.feedbackErrado}</div><div class="feedback-botoes"><button class="btn-primario" onclick="fecharFeedback()">[ Tentar de Novo ]</button><button class="btn-secundario" onclick="reverPistas()">[ Rever Pistas ]</button></div>`;
   document.getElementById('feedback-modal').classList.remove('hidden');
-  if (gameState.vidas <= 0) setTimeout(() => { alert('Suas vidas acabaram! Você pode reiniciar esta sala.'); location.reload(); }, 1000);
+  if (gameState.vidas <= 0) setTimeout(() => exibirGameOver(), 800);
 }
 
 function atualizarVidas() { const vidas = document.querySelectorAll('.vida'); vidas.forEach((v, i) => { if (i >= gameState.vidas) v.classList.add('perdida'); }); }
@@ -165,6 +165,19 @@ function reverPistas() { fecharFeedback(); exibirNaracao("Revise as pistas colet
 
 function proximoPuzzleOuConcluir() { fecharFeedback(); if (gameState.puzzlesResolvidos.length < 3) { gameState.puzzleAtivo = gameState.puzzlesResolvidos.length; exibirPuzzle(gameState.puzzleAtivo); } else { concluirSala(); } }
 
-function concluirSala() { document.getElementById('puzzle-modal').classList.add('hidden'); document.getElementById('feedback-modal').classList.add('hidden'); document.getElementById('sala-view').classList.add('hidden'); document.getElementById('sala-concluida').classList.remove('hidden'); }
+function concluirSala() {
+  GameState.marcarSalaConcluida(4);
+  document.getElementById('puzzle-modal').classList.add('hidden');
+  document.getElementById('feedback-modal').classList.add('hidden');
+  document.getElementById('sala-view').classList.add('hidden');
+  document.getElementById('sala-concluida').classList.remove('hidden');
+}
+
+function exibirGameOver() {
+  const feedback = document.getElementById('feedback-content');
+  feedback.className = 'modal-content feedback-content feedback-errado';
+  feedback.innerHTML = `<div class="feedback-icon">💔</div><div class="feedback-titulo">SUAS VIDAS ACABARAM!</div><div class="feedback-mensagem">Não desanime — rever o conteúdo faz parte do aprendizado. Você pode reiniciar esta sala e tentar novamente.</div><div class="feedback-botoes"><button class="btn-primario" onclick="location.reload()">[ Reiniciar Sala ]</button><button class="btn-secundario" onclick="window.location.href='./corredor.html'">[ Voltar ao Corredor ]</button></div>`;
+  document.getElementById('feedback-modal').classList.remove('hidden');
+}
 
 function exibirNaracao(texto) { const box = document.getElementById('naracao'); document.getElementById('naracao-texto').textContent = texto; box.classList.remove('hidden'); setTimeout(() => { box.classList.add('hidden'); }, 5000); }

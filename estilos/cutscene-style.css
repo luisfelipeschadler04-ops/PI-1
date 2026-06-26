@@ -1,0 +1,158 @@
+/* ===== CUTSCENE ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080818;
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cutscene-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Caixa de diálogo */
+.dialogo-box {
+  background: #0d0d2b;
+  border: 2px solid #3b4a8a;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 700px;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  box-shadow: 0 0 30px rgba(59, 74, 138, 0.4);
+}
+
+.dialogo-box.fade-out {
+  opacity: 0;
+}
+
+.dialogo-header {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #3b4a8a;
+}
+
+/* Cores por tipo de falante */
+.dialogo-header.narrador {
+  background: #1e3a5f;
+  color: #93c5fd;
+}
+
+.dialogo-header.voz-misteriosa {
+  background: #3b0764;
+  color: #c4b5fd;
+}
+
+.dialogo-header.transicao {
+  background: #1f2937;
+  color: #9ca3af;
+}
+
+.dialogo-corpo {
+  padding: 1.5rem 1.75rem;
+  min-height: 100px;
+}
+
+.dialogo-corpo p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  font-style: italic;
+}
+
+.dialogo-corpo p.transicao-texto {
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+}
+
+.btn-continuar {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: #1e3a5f;
+  border: none;
+  border-top: 1px solid #3b4a8a;
+  color: #93c5fd;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 0 0 4px 4px;
+}
+
+.btn-continuar:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Pontos de progresso */
+.progresso-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.dot.ativo {
+  background: #60a5fa;
+  border-color: #93c5fd;
+  box-shadow: 0 0 8px #60a5fa;
+}
+
+.dot.concluido {
+  background: #4a5568;
+  border-color: #60a5fa;
+}
+
+/* Overlay de transição */
+.transicao-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+  z-index: 50;
+}
+
+.transicao-overlay.ativo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 600px) {
+  .dialogo-corpo p {
+    font-size: 0.9rem;
+  }
+}

@@ -182,3 +182,89 @@
     font-size: 1.4rem;
   }
 }
+
+/* ===== Estados dos painéis ===== */
+
+.painel.bloqueado {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.6);
+}
+
+.painel.bloqueado:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.painel.concluido {
+  opacity: 0.75;
+}
+
+.painel-nome {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a8b5ff;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.painel-icone {
+  font-size: 2rem;
+}
+
+.painel-status {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: #8a92b8;
+}
+
+.painel.concluido .painel-status {
+  color: #4ade80;
+}
+
+.painel.disponivel .painel-status {
+  color: #93c5fd;
+}
+
+/* ===== Modais do corredor ===== */
+
+.corredor-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.corredor-modal.hidden {
+  display: none;
+}
+
+.corredor-modal-content {
+  background: #0d0d2b;
+  border: 2px solid #3b4a8a;
+  border-radius: 6px;
+  padding: 2rem;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+}
+
+.corredor-modal-texto {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.corredor-modal-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}

@@ -1,64 +1,64 @@
 // Dados da Sala 2 - Apego Evitativo
 const pistasData = {
   brinquedo: {
-    titulo: "PISTA — Objeto: BRINQUEDO NO CHÃO",
-    texto: "Marina tem 2 anos. Quando a mãe sai do quarto, ela não chora, continua brincando sozinha. Quando a mãe retorna após uma hora, Marina a ignora completamente, virada para o brinquedo, fingindo que não a vê."
+    titulo: "PISTA — Objeto: PAREDE VAZIA",
+    texto: "Pedro tem 3 anos. Quando sua mãe sai para o trabalho, ele não chora e continua brincando. Quando a mãe volta, Pedro mal olha para ela. A babá comenta: 'Pedro é muito independente para a idade!'"
   },
   livro: {
-    titulo: "PISTA — Objeto: LIVRO NA PRATELEIRA",
-    texto: "Bowlby (2002): no apego evitativo, o cuidador é frequentemente indisponível ou rejeitor. A criança aprende a desativar seu sistema de apego, evita buscar proximidade e se torna emocionalmente distante. A criança internalizou que 'não posso confiar'."
+    titulo: "PISTA — Objeto: PORTA FECHADA",
+    texto: "O cuidador evitativo tende a rejeitar ou minimizar as necessidades emocionais da criança — às vezes sem querer, por acreditar que 'mimar' faz mal. A mensagem que a criança internaliza é: 'Minhas emoções incomodam. Não adianta pedir ajuda.' (Bowlby, 2002)"
   },
   diario: {
-    titulo: "PISTA — Objeto: DIÁRIO NA PAREDE",
-    texto: "Crianças com apego evitativo desenvolvem dificuldade em expressar emoções, medo de intimidade, busca excessiva por independência e dificuldade em pedir ajuda na vida adulta. Frequentemente enfrentam problemas em relacionamentos próximos. (Ainsworth et al., 1978)"
+    titulo: "PISTA — Objeto: BRINQUEDO ISOLADO NO CANTO",
+    texto: "A criança com apego evitativo aprende a suprimir emoções para não ser rejeitada. A 'independência' é uma estratégia de sobrevivência — não é maturidade. Internamente, essas crianças ainda apresentam ativação fisiológica de estresse, mesmo sem demonstrá-la. (Papalia & Feldman, 2013)"
   }
 };
 
 const puzzlesData = [
   {
     numero: 1,
-    titulo: "Puzzle 1 de 3 — Por que Marina ignora a mãe?",
-    naracao: "Primeira trava da porta. Use as pistas que coletou para responder!",
-    situacao: "Marina (2 anos) brinca sozinha. A mãe sai por 1 hora e Marina não reage. Quando a mãe volta, Marina continua brincando e a ignora completamente.",
-    pergunta: "O comportamento de Marina de ignorar a mãe ao retorno é um sinal de qual estratégia de apego?",
+    titulo: "Puzzle 1 de 3 — Reconhecendo o apego evitativo",
+    naracao: "Primeira trava da porta. Use as pistas!",
+    situacao: "Sofia (3 anos): quando sua mãe vai trabalhar, ela não chora. Quando a mãe volta, Sofia nem olha para ela e continua com sua atividade. A mãe sorri satisfeita, achando que a filha é muito independente.",
+    pergunta: "O comportamento de Sofia representa qual padrão de apego?",
     opcoes: [
-      { letra: "A", texto: "Desativação do sistema de apego — Marina aprendeu que buscar a mãe não resulta em conforto, então desativa essa necessidade.", correta: true },
-      { letra: "B", texto: "Independência saudável — Marina é uma criança segura e autossuficiente.", correta: false },
-      { letra: "C", texto: "Apego seguro — Marina demonstra confiança em sua mãe.", correta: false },
-      { letra: "D", texto: "Agressividade — Marina está punindo a mãe por tê-la deixado.", correta: false }
+      { letra: "A", texto: "Desenvolvimento avançado — Sofia é madura e não precisa de tanto apoio.", correta: false },
+      { letra: "B", texto: "Apego seguro — Sofia confia que a mãe voltará e por isso não fica ansiosa.", correta: false },
+      { letra: "C", texto: "Apego evitativo — Sofia suprime suas emoções porque aprendeu que demonstrá-las não adianta.", correta: true },
+      { letra: "D", texto: "Apego desorganizado — o comportamento de Sofia não tem padrão claro.", correta: false }
     ],
-    feedbackCorreto: "Exatamente! No apego evitativo, a criança nega ativamente suas necessidades de proximidade porque internalizou que o cuidador não será responsivo. Isso não é independência — é uma estratégia de sobrevivência emocional.",
-    feedbackErrado: "Releia a Pista 2! O comportamento de Marina não é independência ou apego seguro. É uma resposta adaptativa a um cuidador indisponível. A criança 'desativa' o sistema de apego como mecanismo protetor."
+    feedbackCorreto: "Correto! O apego evitativo parece independência, mas é supressão emocional. No apego seguro, a criança BUSCA o cuidador ao retornar. Sofia nem olhou — aprendeu que esse contato não será recompensador.",
+    feedbackErrado: "No apego seguro, a criança BUSCA o cuidador ao retornar. Sofia nem olhou para a mãe. Releia a Pista 1 — a 'independência' de Sofia é frequentemente mal interpretada como maturidade."
   },
   {
     numero: 2,
-    titulo: "Puzzle 2 de 3 — O cuidador na origem do apego evitativo",
-    naracao: "Primeira trava resolvida! Segunda trava se acende. Continue!",
-    situacao: "Lucas tem 1 ano. Toda vez que procura conforto com o pai, é rejeitado com frases como 'você é homem, tem que ser forte' ou 'para de choramingar'. Quando Lucas para de pedir ajuda, o pai o elogia: 'assim sim, filho!'",
-    pergunta: "Qual padrão de cuidado está criando apego evitativo em Lucas?",
+    titulo: "Puzzle 2 de 3 — O papel do cuidador no apego evitativo",
+    naracao: "Segunda trava se acende. Continue!",
+    situacao: "Quando Carlos chora, sua mãe diz: 'Para com isso, você não é bebê.' Quando ele quer um abraço, ela o afasta dizendo que precisa ser forte. Com o tempo, Carlos parou de chorar e de pedir colo, mesmo quando está machucado.",
+    pergunta: "Qual é o papel do comportamento da mãe de Carlos na formação do apego dele?",
     opcoes: [
-      { letra: "A", texto: "Rejeição e punição de comportamentos de busca de proximidade, reforçando que dependência é fraqueza.", correta: true },
-      { letra: "B", texto: "Consistência e proteção — o pai está ensinando Lucas a ser resiliente.", correta: false },
-      { letra: "C", texto: "Modelação de comportamento — o pai está mostrando que é fraco.", correta: false },
-      { letra: "D", texto: "Comunicação clara — o pai sabe o que quer do filho.", correta: false }
+      { letra: "A", texto: "A mãe está ensinando resiliência — Carlos vai crescer mais forte e independente.", correta: false },
+      { letra: "B", texto: "O comportamento é neutro — Carlos pararia de chorar naturalmente com a idade.", correta: false },
+      { letra: "C", texto: "A mãe está formando o apego evitativo — Carlos aprende a suprimir emoções para não ser rejeitado.", correta: true },
+      { letra: "D", texto: "A mãe está formando apego desorganizado — Carlos sente medo dela.", correta: false }
     ],
-    feedbackCorreto: "Correto! No apego evitativo, o cuidador regularmente rejeita tentativas de proximidade. A criança internaliza a mensagem 'suas necessidades são indesejadas' e aprende a suprimi-las. Isso não cria força — cria distância emocional.",
-    feedbackErrado: "O apego evitativo não é causado por consistência ou ensinamento de resiliência. É causado por rejeição consistente quando a criança busca proximidade. O pai está punis-la por ter necessidades legítimas."
+    feedbackCorreto: "Exatamente! O cuidador evitativo muitas vezes acredita estar ensinando autonomia. Mas a mensagem que a criança recebe é: 'Minhas emoções são um problema.' E ela aprende a escondê-las. (Bowlby, 2002)",
+    feedbackErrado: "Há uma diferença importante entre ensinar resiliência saudável e rejeitar emoções. Carlos não parou de sentir — parou de demonstrar. Internamente, o estresse continua. Releia a Pista 2!"
   },
   {
     numero: 3,
-    titulo: "Puzzle 3 de 3 — Adultos com apego evitativo",
-    naracao: "Última trava! Resolva para abrir a porta da Sala 2.",
-    situacao: "Sofia tem 28 anos. Em seu relacionamento, evita falar sobre sentimentos, nega que sente falta do parceiro quando ele viaja, não consegue pedir ajuda mesmo quando precisa, e frequentemente sabota relacionamentos quando se aproximam demais.",
-    pergunta: "Como o apego evitativo da infância de Sofia está se manifestando na vida adulta?",
+    titulo: "Puzzle 3 de 3 — Consequências do apego evitativo na vida adulta",
+    naracao: "Última trava da Sala 2. Resolva para abrir a porta!",
+    situacao: "Marina (30 anos) evita pedir ajuda mesmo quando precisa, tem dificuldade em se abrir emocionalmente com parceiros e sente desconforto quando alguém demonstra carinho ou vulnerabilidade.",
+    pergunta: "Segundo a Teoria do Apego, o padrão relacional de Marina está relacionado a:",
     opcoes: [
-      { letra: "A", texto: "Sofia nunca sofreu traumas — ela é naturalmente independente.", correta: false },
-      { letra: "B", texto: "Os padrões de apego evitativo se perpetuam através dos 'modelos internos de funcionamento': Sofia continua desativando necessidades emocionais e evitando intimidade.", correta: true },
-      { letra: "C", texto: "Sofia faz escolhas conscientes de manter distância — é uma estratégia racional adulta.", correta: false },
-      { letra: "D", texto: "A personalidade de Sofia é incompatível com relacionamentos próximos.", correta: false }
+      { letra: "A", texto: "Traços de personalidade — Marina simplesmente é uma pessoa mais reservada por natureza.", correta: false },
+      { letra: "B", texto: "O apego evitativo na infância criou um modelo interno de que emoções são indesejadas e que não se pode contar com os outros.", correta: true },
+      { letra: "C", texto: "Experiências ruins em relacionamentos adultos que a tornaram fechada.", correta: false },
+      { letra: "D", texto: "Introversão — completamente independente do apego.", correta: false }
     ],
-    feedbackCorreto: "Perfeito! Para Bowlby, os padrões de apego se cristalizam nos 'modelos internos de funcionamento'. Sofia não escolhe conscientemente — her relacionamentos são guiados pelos padrões de apego formados na infância: 'proximidade é perigosa, não devo confiar'.",
-    feedbackErrado: "Releia a Pista 3! O apego evitativo não é personalidade inata nem independência genuína. São padrões aprendidos que se perpetuam na vida adulta através de modelos internos de funcionamento. Sofia precisa de terapia para reconectar com suas necessidades emocionais."
+    feedbackCorreto: "Perfeito! O apego evitativo cria um modelo interno de: 'As pessoas não são confiáveis e demonstrar necessidade é perigoso.' Marina aprendeu isso na infância e carrega esse padrão para as relações adultas.",
+    feedbackErrado: "Releia a Pista 3! A dificuldade de Marina com intimidade não é personalidade inata — é o aprendizado de que emoções são indesejadas e pedir apoio leva à rejeição."
   }
 ];
 
@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Iniciar Sala
 function iniciarSala() {
+  GameState.resetarAcertosSala(2);
   document.getElementById('intro-modal').classList.add('hidden');
   document.getElementById('sala-view').classList.remove('hidden');
 }
@@ -185,6 +186,7 @@ function submeterResposta() {
   const acertou = opcaoSelecionada.correta;
 
   if (acertou) {
+    GameState.salvarAcerto(2);
     exibirFeedbackCorreto(puzzle);
   } else {
     exibirFeedbackErrado(puzzle);
@@ -232,10 +234,7 @@ function exibirFeedbackErrado(puzzle) {
   document.getElementById('feedback-modal').classList.remove('hidden');
 
   if (gameState.vidas <= 0) {
-    setTimeout(() => {
-      alert('Suas vidas acabaram! Você pode reiniciar esta sala.');
-      location.reload();
-    }, 1000);
+    setTimeout(() => exibirGameOver(), 800);
   }
 }
 
@@ -274,10 +273,26 @@ function proximoPuzzleOuConcluir() {
 }
 
 function concluirSala() {
+  GameState.marcarSalaConcluida(2);
   document.getElementById('puzzle-modal').classList.add('hidden');
   document.getElementById('feedback-modal').classList.add('hidden');
   document.getElementById('sala-view').classList.add('hidden');
   document.getElementById('sala-concluida').classList.remove('hidden');
+}
+
+function exibirGameOver() {
+  const feedback = document.getElementById('feedback-content');
+  feedback.className = 'modal-content feedback-content feedback-errado';
+  feedback.innerHTML = `
+    <div class="feedback-icon">💔</div>
+    <div class="feedback-titulo">SUAS VIDAS ACABARAM!</div>
+    <div class="feedback-mensagem">Não desanime — rever o conteúdo faz parte do aprendizado. Você pode reiniciar esta sala e tentar novamente.</div>
+    <div class="feedback-botoes">
+      <button class="btn-primario" onclick="location.reload()">[ Reiniciar Sala ]</button>
+      <button class="btn-secundario" onclick="window.location.href='./corredor.html'">[ Voltar ao Corredor ]</button>
+    </div>
+  `;
+  document.getElementById('feedback-modal').classList.remove('hidden');
 }
 
 function exibirNaracao(texto) {
