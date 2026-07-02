@@ -73,6 +73,8 @@ function iniciarSala() {
   document.getElementById('intro-modal').classList.add('hidden');
   document.getElementById('sala-view').classList.remove('hidden');
 }
+
+function adicionarEventosPistas() {
   document.querySelectorAll('.pista-item').forEach(item => {
     item.addEventListener('click', function() {
       const pistaId = this.dataset.pista;
